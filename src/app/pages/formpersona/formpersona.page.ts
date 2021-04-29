@@ -14,7 +14,7 @@ export class FormpersonaPage implements OnInit {
     apellidos: '',
     edad: 0,
     fechaNacimiento: ''
-  }
+  };
   objPersonaBLL: PersonaBLL = new PersonaBLL();
 
   constructor(private dbService: DbService, private router: Router) { }
@@ -29,7 +29,7 @@ export class FormpersonaPage implements OnInit {
       this.objPersona.edad,
       this.objPersona.fechaNacimiento
     ).then(() => {
-      this.router.navigate(['/home'])
+      this.router.navigate(['/home']);
     }).catch(error => {
       console.log('Error al insertar', error);
     });
